@@ -2,26 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Square(props) {
-    const styles = {
-        backgroundColor: props.backgroundColor,
-        height: props.height,
-        width: props.width
-}
     return (
 
         <div>
-            <div style={styles}></div>
+            <img
+                src={props.src}
+                style={{borderRadius:props.borderRadius}}
+                alt="A black puppy"
+            ></img>
         </div>
     ) 
 }
 
 
 Square.defaultProps = {
-    backgroundColor: "green",
-    height: "3em",
-    width: "3em"
+    borderRadius: "30%",
+    src: "https://picsum.photos/id/237/300/300"
 } 
 
 Square.propTypes = {
-    backgroundColor: PropTypes.string
+    borderRadius: PropTypes.string.isRequired,
+    src: PropTypes.oneOf([PropTypes.string, PropTypes.number])
 }
