@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Square(props) {
     const styles = {
@@ -19,5 +20,8 @@ Square.defaultProps = {
     backgroundColor: "green",
     height: "3em",
     width: "3em"
-    
-}   
+} 
+
+Square.propTypes = {
+    backgroundColor: PropTypes.string
+}
