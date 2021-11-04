@@ -22,5 +22,5 @@ Square.defaultProps = {
 
 Square.propTypes = {
     borderRadius: PropTypes.string.isRequired,
-    src: PropTypes.oneOf([PropTypes.string, PropTypes.number])
+    src: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
